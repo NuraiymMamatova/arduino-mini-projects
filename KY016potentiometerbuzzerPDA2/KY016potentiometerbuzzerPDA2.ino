@@ -1,3 +1,40 @@
+// LESSON_7 LCD-display(MT-16S2H v.7) with Latin and Kyrillic letters (old version) ... https://wiki.amperka.ru/products:display-lcd-text-16x2#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B_%D0%B4%D0%BB%D1%8F_arduino
+// Библиотека для работы с текстовым дисплеем  .. https://docs.arduino.cc/libraries/liquidcrystal/
+//#include <LiquidCrystalRus.h>
+// 
+//// Задаём имя пинов дисплея
+//constexpr uint8_t PIN_RS = 6;
+//constexpr uint8_t PIN_EN = 7;
+//constexpr uint8_t PIN_DB4 = 8;
+//constexpr uint8_t PIN_DB5 = 9;
+//constexpr uint8_t PIN_DB6 = 10;
+//constexpr uint8_t PIN_DB7 = 11;
+//
+///*
+// * Создаём объект для работы с текстовым дисплеем
+// * LiquidCrystal lcd(RS, EN, DB4, DB5, DB6, DB7);
+// * Подробности подключения:
+// * http://wiki.amperka.ru/products:display-lcd-text-16x2
+//*/
+// 
+//LiquidCrystalRus lcd(PIN_RS, PIN_EN, PIN_DB4, PIN_DB5, PIN_DB6, PIN_DB7);
+//
+// 
+//void setup() {
+//  // Устанавливаем размер экрана
+//  // Количество столбцов и строк
+//  lcd.begin(16, 2);
+//  // Устанавливаем курсор в колонку 5 и строку 0
+//  lcd.setCursor(5, 0);
+//  // Печатаем  строку
+//  lcd.print("Привет");
+//   lcd.setCursor(5, 1);
+//  lcd.print("Hello");
+//}
+// 
+//void loop() {
+//  
+//}
 //LESSON_6 keypad 4x4 with LEDs
 //#include <Keypad.h>
 //
