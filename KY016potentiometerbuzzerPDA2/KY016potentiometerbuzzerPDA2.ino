@@ -1,3 +1,109 @@
+/*   DATE: Jun 20 2025
+     Writer: Abdliashim Nuraiym 
+     Theme: jqc-3ff-s-z Relay, HC-SR04, DHT11, HC-SR501, MQ2 sensor
+*/
+// LESSON_10 
+//#include <DHT.h>
+//
+//#define LED 2
+//#define Sensor A1
+//#define pirPin 6
+//#define ledPin 7
+//#define DHTPIN 8 // digital pin connected to sensor
+//#define DHTTYPE DHT11     // DHT 11
+//#define trigPin 4 // Set the trigger pin
+//#define echoPin 3 // Set the echo pin
+//DHT dht(DHTPIN, DHTTYPE); 
+//
+//void setup() {
+//  Serial.begin(9600);
+//  pinMode(LED, OUTPUT);
+//  pinMode(pirPin, INPUT);
+//  pinMode(ledPin, OUTPUT);
+//  pinMode(trigPin, OUTPUT); // Set the trigger pin as an output
+//  pinMode(echoPin, INPUT); // Set the echo pin as an input
+//}
+//
+//void loop() {
+//  // HC-SR04
+//  digitalWrite(trigPin, LOW); // Set the trigger pin to low
+//  delayMicroseconds(2); // Wait for 2 microseconds
+//  digitalWrite(trigPin, HIGH); // Set the trigger pin to high
+//  delayMicroseconds(10); // Wait for 10 microseconds
+//  digitalWrite(trigPin, LOW); // Set the trigger pin to low
+//  long duration = pulseIn(echoPin, HIGH); // Measure the duration of the echo pulse
+//  int distance = duration * 0.034 / 2; // Calculate the distance in centimeters
+//  Serial.print("Distance: "); // Print the distance to the serial monitor
+//  Serial.print(distance);
+//  Serial.println(" cm");
+//  delay(500); // Wait for half a second
+//  // DHT11 code
+//  float t = dht.readTemperature();
+//  float h = dht.readHumidity();
+//  Serial.println("Temp: ");
+//  Serial.print(t);
+//  Serial.print("C");
+//  Serial.println("Humidity: ");
+//  Serial.print(h);
+//  Serial.print("%");
+//  delay(1000);
+//  // motion sensor code HC-SR501
+//  int motion = digitalRead(pirPin);
+//  digitalWrite(ledPin, motion);
+//  // MQ2 sensor flying fish code
+//  int value = analogRead(Sensor);
+//  if (value > 400) {
+//    digitalWrite(LED, HIGH);
+//  } else {
+//    digitalWrite(LED, LOW);
+//  }
+//}
+// Lesson_9 jqc-3ff-s-z Relay
+//int relayPin = 13;
+//
+//void setup() {
+//  pinMode(relayPin, OUTPUT);
+//}
+//void loop() {
+//  digitalWrite(relayPin, LOW); 
+//  delay(500);
+//  digitalWrite(relayPin, HIGH);
+//}
+
+/*   DATE: Jun 19 2025
+     Writer: Abdliashim Nuraiym 
+     Theme: Old LCD-display, lazer module KY-008 with infrared light KY-022
+*/
+// LESSON_8 lazer module KY-008 with infrared light KY-022
+// Code for blinking a laser module using Arduino
+// Author: Oyvind N. Dahl
+// Website: https://www.build-electronic-circuits.com/
+//#include <IRremote.hpp>
+//#define RECV_PIN 11
+//
+//IRrecv irrecv(RECV_PIN); 
+//decode_results results; // decode_results class is defined in IRremote.h
+//
+//void setup() {
+//  Serial.begin(9600);
+//  pinMode(2, OUTPUT);  
+//  irrecv.enableIRIn();
+//}
+//
+//void loop() {
+//  digitalWrite(2, HIGH);
+//if (IrReceiver.decode()) {
+//      Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX); // Print "old" raw data
+//      IrReceiver.printIRResultShort(&Serial); // Print complete received data in one line
+//      IrReceiver.printIRSendUsage(&Serial);   // Print the statement required to send this data
+//      IrReceiver.resume(); // Enable receiving of the next value
+//  }
+//  delay (100); // small delay to prevent reading errors
+//  delay(300);
+  
+//  digitalWrite(2, LOW);
+//  delay(700);
+//}
 // LESSON_7 LCD-display(MT-16S2H v.7) with Latin and Kyrillic letters (old version) ... https://wiki.amperka.ru/products:display-lcd-text-16x2#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B_%D0%B4%D0%BB%D1%8F_arduino
 // Библиотека для работы с текстовым дисплеем  .. https://docs.arduino.cc/libraries/liquidcrystal/
 //#include <LiquidCrystalRus.h>
